@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import PropTypes from 'prop-types';
+import './ContactListPage.css';
 
 import * as contactListActions from '../../actions/contactListActions';
 

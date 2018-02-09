@@ -1,14 +1,17 @@
 import React from 'react';
 
+import "./FilterTypeSelector.css";
+
 
 const FilterTypeSelector = ({
   onContactFilterTypeChange
 }) => {
   return (
-    <div className="contact-list-page__filter-section">
-      <label className="contact-list-page__filter-label">Name:
+    <div className="filter-type-selector">
+      <label className="filter-type-selector__label">
+        Name:
         <input
-          className="contact-list-page__filter-radio-btn"
+          className="filter-type-selector__radio-btn"
           type="radio"
           name="filterType"
           value="first_name"
@@ -17,38 +20,40 @@ const FilterTypeSelector = ({
         />
       </label>
 
-      <label className="contact-list-page__filter-label">
+      <label className="filter-type-selector__label">
         Surname:
         <input
-          className="contact-list-page__filter-radio-btn"
+          className="filter-type-selector__radio-btn"
           type="radio"
           name="filterType"
           value="last_name"
           onChange={onContactFilterTypeChange}/>
       </label>
 
-      <label className="contact-list-page__filter-label">
+      <label className="filter-type-selector__label">
         Title:
         <input
-          className="contact-list-page__filter-radio-btn"
+          className="filter-type-selector__radio-btn"
           type="radio"
           name="filterType"
           value="title"
           onChange={onContactFilterTypeChange}/>
       </label>
 
-      <label className="contact-list-page__filter-label">Location:
+      <label className="filter-type-selector__label">
+        Location:
         <input
-          className="contact-list-page__filter-radio-btn"
+          className="filter-type-selector__radio-btn"
           type="radio"
           name="filterType"
           value="location"
           onChange={onContactFilterTypeChange}/>
       </label>
 
-      <label className="contact-list-page__filter-label">Team:
+      <label className="filter-type-selector__label">
+        Team:
         <input
-          className="contact-list-page__filter-radio-btn"
+          className="filter-type-selector__radio-btn"
           type="radio"
           name="filterType"
           value="team"

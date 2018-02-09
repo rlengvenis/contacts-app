@@ -1,4 +1,4 @@
-@import "../core/variables.scss";
+@import "../../styles/core/variables.scss";
 
 .input {
   margin-top: 5px;
@@ -32,23 +32,5 @@
   }
 }
 
-.color-section {
-  margin-top: 20px;
-
-  &__label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  &__color-picker {
-    margin-left: 7px;
-    width: 38px;
-    height: 40px;
-    border-bottom: 0;
-    cursor: pointer;
-  }
-}
 
 

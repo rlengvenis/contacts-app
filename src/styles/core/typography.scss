@@ -1,0 +1,17 @@
+@import "variables.scss";
+
+
+/* ------------ HEADINGS --------------- */
+
+h1, h2 {
+    font-weight: $font-weight-regular;
+}
+  
+h1 {
+    font-size: $font-size-x-large;
+}
+  
+h2 {
+    font-size: $font-size-large;
+}
+

@@ -2,6 +2,9 @@ import React from 'react';
 import classnames from 'classnames'
 import PropTypes from 'prop-types';
 
+import "./FormInput.css";
+
+
 const FormInput = ({meta, type, input, placeholder, className}) => {
   const inputSyle = classnames(className, 'input', {
     'input--has-error': meta.touched && meta.error,

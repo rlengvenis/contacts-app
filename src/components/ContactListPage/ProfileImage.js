@@ -4,7 +4,7 @@ const ProfileImage = ({imgUrl, color}) => {
   if (!imgUrl) {
     return (
       <div
-        className="profile__image"
+        className="contact-profile__image"
         style={{backgroundColor: color}}
       >
         No Photo
@@ -14,7 +14,7 @@ const ProfileImage = ({imgUrl, color}) => {
 
   return (
     <img
-      className="profile__image"
+      className="contact-profile__image"
       src={imgUrl}
       alt="Profile avatar"
     />

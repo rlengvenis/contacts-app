@@ -5,7 +5,7 @@ import * as actionTypes from './actionTypes';
 import {
   addHashToColorCode,
   removeHashFromColorCode
-} from '../utils/transformDataUtils';
+} from '../utils/contactsDataUtils';
 
 
 export const addNewContact = ({contact}) => async (dispatch) => {

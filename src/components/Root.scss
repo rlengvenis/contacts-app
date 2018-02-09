@@ -1,0 +1,19 @@
+@import "../styles/core/variables.scss";
+@import '../styles/core/reset.scss';
+@import '../styles/core/buttons.scss';
+@import '../styles/core/typography.scss';
+
+html {
+  color: $color-black;
+  font-family: $font-family;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-regular;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  margin: 124px auto 60px auto;
+  padding: 0 15px;
+  max-width: 600px;
+}
+

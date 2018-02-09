@@ -2,7 +2,10 @@ import React from 'react';
 import {reduxForm, Field} from 'redux-form';
 import {required, url, format} from 'redux-form-validators'
 
+import './ContactForm.css';
+
 import FormInput from '../shared/FormInput';
+import ColorPickerField from './ColorPickerField';
 
 
 export class ContactForm extends React.PureComponent {
@@ -68,19 +71,7 @@ export class ContactForm extends React.PureComponent {
           placeholder="Function Level Team"
           validate={[required()]}
         />
-        <div className="color-section">
-          <label
-            className="color-section__label"
-          >
-            Color:
-            <Field
-              className="color-section__color-picker"
-              type="color"
-              component={FormInput}
-              name="color"
-            />
-          </label>
-        </div>
+        <ColorPickerField />
         <div>
           <button
             type="submit"

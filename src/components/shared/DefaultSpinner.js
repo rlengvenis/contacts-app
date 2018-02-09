@@ -1,6 +1,8 @@
 import React from 'react';
 import Spinner from 'react-spinner-material';
 
+import './DefaultSpinner.css';
+
 
 const DefaultSpinner = () => {
   return (

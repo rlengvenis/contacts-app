@@ -1,33 +1,35 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import './ContactProfile.css';
+
 import ProfileImage from './ProfileImage';
 
 
 const ContactProfile = ({contact}) => {
   return (
-    <div className="profile">
+    <div className="contact-profile">
       <ProfileImage
         imgUrl={contact.image}
         color={contact.color}
       />
-      <ul className="profile__detail-list">
-        <li className="profile__detail-list-item">
-          <span className="profile__title">First Name:</span> {contact.first_name}
+      <ul className="contact-profile__detail-list">
+        <li className="contact-profile__detail-list-item">
+          <span className="contact-profile__title">First Name:</span> {contact.first_name}
         </li>
-        <li className="profile__detail-list-item">
-          <span className="profile__title">Last Name:</span> {contact.last_name}
+        <li className="contact-profile__detail-list-item">
+          <span className="contact-profile__title">Last Name:</span> {contact.last_name}
         </li>
-        <li className="profile__detail-list-item">
-          <span className="profile__title">Title:</span> {contact.title}
+        <li className="contact-profile__detail-list-item">
+          <span className="contact-profile__title">Title:</span> {contact.title}
         </li>
-        <li className="profile__detail-list-item">
-          <span className="profile__title">Location:</span> {contact.location}
+        <li className="contact-profile__detail-list-item">
+          <span className="contact-profile__title">Location:</span> {contact.location}
         </li>
-        <li className="profile__detail-list-item">
-          <span className="profile__title">Team:</span> {contact.team}
+        <li className="contact-profile__detail-list-item">
+          <span className="contact-profile__title">Team:</span> {contact.team}
         </li>
-        <li className="profile__detail-list-item">
+        <li className="contact-profile__detail-list-item">
           <NavLink
             to={{
               pathname: '/edit-contact',

@@ -1,8 +1,11 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+
+
+import './Header.css';
+
+import Navigation from './Navigation';
 
 
 const MEDIA_MD = 600; // The viewport min size, where mobile navigation bar is not shown any more
@@ -13,59 +16,24 @@ export class Header extends React.PureComponent {
     super(props);
 
     this.state = {
-      isNavListVisible: window.innerWidth >= MEDIA_MD
+      isNavigationVisible: window.innerWidth >= MEDIA_MD
     };
   }
 
   render() {
-    const {
-      authenticated
-    } = this.props;
-
-
-    const navigationStyle = classnames('navigation__list', {
-      'navigation__list--hidden': !this.state.isNavListVisible
-    });
-
     return (
-      <header className="app__header">
-        <nav>
-          <i
-            className="material-icons navigation__menu"
-            onClick={this.handleNavigationVisibilityToggle}
-          >
-            menu
-          </i>
-          <ul className={navigationStyle}>
-            <li className="navigation__list-item">
-              <NavLink
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-                onClick={this.handleNavigationVisibilityToggle}
-                to="/contacts"
-              >
-                Contacts
-              </NavLink>
-            </li>
-            <li className="navigation__list-item">
-              <NavLink
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-                onClick={this.handleNavigationVisibilityToggle}
-                to="/add-contact"
-              >
-                Add New
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+      <header className="app-header">
+        <Navigation
+          isNavigationVisible={this.state.isNavigationVisible}
+          onNavigationVisibilityToggle={this.handleNavigationVisibilityToggle}
+        />
       </header>
     );
   }
 
   handleNavigationVisibilityToggle = () => {
     this.setState({
-      isNavListVisible: window.innerWidth >= MEDIA_MD || !this.state.isNavListVisible
+      isNavigationVisible: window.innerWidth >= MEDIA_MD || !this.state.isNavigationVisible
     });
   }
 }
