@@ -16,7 +16,7 @@ export class ContactAddPage extends React.PureComponent {
   render() {
     return (
       <ContactForm
-        handleContact={this.handleAddNewContact}
+        onSubmitContact={this.handleAddNewContact}
       />
     )
   }

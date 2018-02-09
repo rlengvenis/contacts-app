@@ -13,13 +13,13 @@ export class ContactForm extends React.PureComponent {
     const {
       handleSubmit,
       submitting,
-      handleContact,
+      onSubmitContact,
     } = this.props;
 
     return (
       <form
         className="contact-form"
-        onSubmit={handleSubmit(handleContact)}>
+        onSubmit={handleSubmit(onSubmitContact)}>
         <Field
           type="text"
           component={FormInput}
@@ -71,7 +71,9 @@ export class ContactForm extends React.PureComponent {
           placeholder="Function Level Team"
           validate={[required()]}
         />
+
         <ColorPickerField />
+
         <div>
           <button
             type="submit"

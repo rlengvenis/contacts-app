@@ -28,7 +28,7 @@ export class ContactEditPage extends React.PureComponent {
 
     return (
       <ContactForm
-        handleContact={this.handleEditContact}
+        onSubmitContact={this.handleEditContact}
         {...this.props}
       />
     )
