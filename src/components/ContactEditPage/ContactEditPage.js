@@ -12,7 +12,9 @@ import ContactForm from '../ContactForm/ContactForm';
 
 export class ContactEditPage extends React.PureComponent {
   componentDidMount() {
-    const contactId = queryString.parse(this.props.location.search).id;
+    const searchQuery = this.props.location.search;
+    const contactId = queryString.parse(searchQuery).id;
+
     this.props.contactActions.getContactById(contactId);
   }
 
