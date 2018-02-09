@@ -1,0 +1,10 @@
+@import '../../styles/core/variables.scss';
+
+.avatar-image {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+}

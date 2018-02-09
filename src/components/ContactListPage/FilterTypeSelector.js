@@ -6,6 +6,7 @@ import "./FilterTypeSelector.css";
 const FilterTypeSelector = ({
   onContactFilterTypeChange
 }) => {
+
   return (
     <div className="filter-type-selector">
       <label className="filter-type-selector__label">

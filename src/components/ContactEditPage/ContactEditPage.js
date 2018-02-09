@@ -20,7 +20,6 @@ export class ContactEditPage extends React.PureComponent {
     this.props.contactActions.resetContact();
   }
 
-
   render() {
     if (!this.props.initialValues) {
       return <DefaultSpinner/>;
@@ -49,6 +48,8 @@ const mapDispatchToProps = (dispatch) => ({
   contactActions: bindActionCreators(contactActions, dispatch)
 });
 
-const ConnectedContactAddPage = connect(mapStateToProps, mapDispatchToProps)(ContactEditPage);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ContactEditPage);
 
-export default ConnectedContactAddPage;

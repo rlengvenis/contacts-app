@@ -1,10 +1,17 @@
 import React from 'react';
 
-const ProfileImage = ({imgUrl, color}) => {
+import "./AvatarImage.css";
+
+
+const AvatarImage = ({
+  imgUrl,
+  color
+}) => {
+
   if (!imgUrl) {
     return (
       <div
-        className="contact-profile__image"
+        className="avatar-image"
         style={{backgroundColor: color}}
       >
         No Photo
@@ -14,11 +21,11 @@ const ProfileImage = ({imgUrl, color}) => {
 
   return (
     <img
-      className="contact-profile__image"
+      className="avatar-image"
       src={imgUrl}
       alt="Profile avatar"
     />
   )
 };
 
-export default ProfileImage;
+export default AvatarImage;

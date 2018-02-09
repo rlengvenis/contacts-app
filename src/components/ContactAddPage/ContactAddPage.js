@@ -32,6 +32,8 @@ const mapDispatchToProps = (dispatch) => ({
   contactActions: bindActionCreators(contactActions, dispatch)
 });
 
-const ConnectedContactAddPage = connect(null, mapDispatchToProps)(ContactAddPage);
+export default connect(
+  null,
+  mapDispatchToProps
+)(ContactAddPage);
 
-export default ConnectedContactAddPage;

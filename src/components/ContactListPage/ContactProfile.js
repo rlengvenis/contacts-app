@@ -3,13 +3,16 @@ import {NavLink} from 'react-router-dom';
 
 import './ContactProfile.css';
 
-import ProfileImage from './ProfileImage';
+import AvatarImage from './AvatarImage';
 
 
-const ContactProfile = ({contact}) => {
+const ContactProfile = ({
+  contact
+}) => {
+
   return (
     <div className="contact-profile">
-      <ProfileImage
+      <AvatarImage
         imgUrl={contact.image}
         color={contact.color}
       />

@@ -48,4 +48,7 @@ const mapStateToProps = (state) => ({
   routing: state.routing //Otherwise active links are not updated, even though router setState happens
 });
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(
+  mapStateToProps,
+  null
+)(Header);
