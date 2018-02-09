@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
+import {addHashToColorCodes} from '../utils/transformDataUtils';
 
 
 export const getContactList = (filterConfig) => async (dispatch) => {
@@ -21,7 +22,7 @@ export const getContactList = (filterConfig) => async (dispatch) => {
 
     dispatch({
       type: actionTypes.CONTACT_LIST_GET_SUCCESS,
-      payload: response.data
+      payload: addHashToColorCodes(response.data)
     });
 
   } catch (error) {

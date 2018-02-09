@@ -1,0 +1,19 @@
+.contact-list-page {
+  &__filter-section {
+    margin-top: 25px;
+  }
+
+  &__filter-label {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &__filter-radio-btn {
+    margin-left: 5px;
+  }
+
+  &__contact-list {
+    margin-top: 40px;
+    list-style: none;
+  }
+}

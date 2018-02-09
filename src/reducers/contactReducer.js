@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const contactReducer = (state = {}, action) => {
+const contactReducer = (state = null, action) => {
   switch (action.type) {
     case actionTypes.CONTACT_GET_CONTACT_SUCCESS: {
       return {
@@ -9,7 +9,7 @@ const contactReducer = (state = {}, action) => {
     }
 
     case actionTypes.CONTACT_RESET_CONTACT: {
-      return {};
+      return null;
     }
 
     default:  {

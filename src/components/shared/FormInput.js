@@ -2,9 +2,9 @@ import React from 'react';
 import classnames from 'classnames'
 import PropTypes from 'prop-types';
 
-const FormInput = ({meta, type, input, placeholder}) => {
-  const inputSyle = classnames('input', {
-    'input__has-error': meta.touched && meta.error
+const FormInput = ({meta, type, input, placeholder, className}) => {
+  const inputSyle = classnames(className, 'input', {
+    'input--has-error': meta.touched && meta.error,
   });
 
   return (
@@ -15,7 +15,7 @@ const FormInput = ({meta, type, input, placeholder}) => {
         placeholder={placeholder}
         {...input}
       />
-      <div className="input--error-message">
+      <div className="input__error-message">
         {
           meta.touched && meta.error &&
           <span>{`Error: ${meta.error}`}</span>
@@ -28,7 +28,7 @@ const FormInput = ({meta, type, input, placeholder}) => {
 FormInput.propTypes = {
   input: PropTypes.object.isRequired,
   meta: PropTypes.object.isRequired,
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   type: PropTypes.string.isRequired
 };
 

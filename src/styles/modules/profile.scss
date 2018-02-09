@@ -1,0 +1,33 @@
+@import '../core/variables.scss';
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  &__image {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+  }
+
+  &__detail-list {
+    list-style: none;
+    margin-left: 20px;
+  }
+
+  &__detail-list-item {
+    margin-bottom: 7px;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+  }
+}
+
+
+
+

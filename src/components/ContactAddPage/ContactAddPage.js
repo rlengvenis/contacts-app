@@ -8,6 +8,11 @@ import ContactForm from '../ContactForm/ContactForm';
 
 
 export class ContactAddPage extends React.PureComponent {
+
+  componentWillUnmount() {
+    this.props.contactActions.resetContact();
+  }
+
   render() {
     return (
       <ContactForm
@@ -17,7 +22,7 @@ export class ContactAddPage extends React.PureComponent {
   }
 
   handleAddNewContact = (formData) => {
-    this.props.contactActions.addNewContact({
+    return this.props.contactActions.addNewContact({
       contact: formData
     });
   }

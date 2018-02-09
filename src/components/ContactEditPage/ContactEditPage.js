@@ -22,7 +22,7 @@ export class ContactEditPage extends React.PureComponent {
 
 
   render() {
-    if (isEmpty(this.props.initialValues)) {
+    if (!this.props.initialValues) {
       return <DefaultSpinner/>;
     }
 
@@ -35,7 +35,7 @@ export class ContactEditPage extends React.PureComponent {
   }
 
   handleEditContact = (formData) => {
-    this.props.contactActions.updateContact({
+   return this.props.contactActions.updateContact({
       contact: formData
     });
   }

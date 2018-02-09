@@ -19,9 +19,10 @@ import '../styles/modules/form.css';
 import '../styles/modules/navigation.css';
 import '../styles/modules/spinner.css';
 import '../styles/modules/error-message.css';
+import '../styles/modules/profile.css';
 import '../styles/pages/App.css';
-import '../styles/pages/LoginForm.css';
-import '../styles/pages/TaskPage.css';
+import '../styles/pages/ContactForm.css';
+import '../styles/pages/ContactListPage.css';
 
 
 const Root = () => (

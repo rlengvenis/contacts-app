@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 
-const contactListReducer = (state = [], action) => {
+const contactListReducer = (state = null, action) => {
   switch (action.type) {
     case actionTypes.CONTACT_LIST_GET_SUCCESS: {
       return action.payload;

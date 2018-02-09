@@ -7,7 +7,6 @@ import FormInput from '../shared/FormInput';
 
 export class ContactForm extends React.PureComponent {
   render() {
-    console.log('this.props.initialValues', this.props.initialValues);
     const {
       handleSubmit,
       submitting,
@@ -15,7 +14,9 @@ export class ContactForm extends React.PureComponent {
     } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(handleContact)}>
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit(handleContact)}>
         <Field
           type="text"
           component={FormInput}
@@ -38,12 +39,6 @@ export class ContactForm extends React.PureComponent {
           validate={[required()]}
         />
         <Field
-          type="color"
-          component={FormInput}
-          name="color"
-          validate={[required()]}
-        />
-        <Field
           type="text"
           component={FormInput}
           name="image"
@@ -60,7 +55,10 @@ export class ContactForm extends React.PureComponent {
           placeholder="Location as timezone"
           validate={[
             required(),
-            format({with: /[A-Za-z_]+\/[A-Za-z_]+$/, message: "doesn't comply to location pattern Area/Location"})
+            format({
+              with: /[A-Za-z_]+\/[A-Za-z_]+$/,
+              message: "doesn't comply to location pattern Area/Location"
+            })
           ]}
         />
         <Field
@@ -70,13 +68,26 @@ export class ContactForm extends React.PureComponent {
           placeholder="Function Level Team"
           validate={[required()]}
         />
+        <div className="color-section">
+          <label
+            className="color-section__label"
+          >
+            Color:
+            <Field
+              className="color-section__color-picker"
+              type="color"
+              component={FormInput}
+              name="color"
+            />
+          </label>
+        </div>
         <div>
           <button
             type="submit"
-            className="button-raised"
+            className="contact-form__submit-button button-raised"
             disabled={submitting}
           >
-            Submit contact
+            Submit
           </button>
         </div>
       </form>

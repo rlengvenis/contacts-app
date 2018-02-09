@@ -2,11 +2,15 @@ import axios from 'axios';
 
 import history from '../history';
 import * as actionTypes from './actionTypes';
+import {
+  addHashToColorCode,
+  removeHashFromColorCode
+} from '../utils/transformDataUtils';
 
 
 export const addNewContact = ({contact}) => async (dispatch) => {
   try {
-    await axios.post('/contacts', contact);
+    await axios.post('/contacts', removeHashFromColorCode(contact));
 
     // dispatch({
     //   type: actionTypes.CONTACT_ADD_NEW_CONTACT_SUCCESS
@@ -30,7 +34,7 @@ export const getContactById = (id) => async (dispatch) => {
 
     dispatch({
       type: actionTypes.CONTACT_GET_CONTACT_SUCCESS,
-      payload: response.data
+      payload: addHashToColorCode(response.data)
     });
 
   } catch (error) {
@@ -47,7 +51,7 @@ export const resetContact = () => ({
 
 export const updateContact = ({contact}) => async (dispatch) => {
   try {
-    await axios.put(`/contacts/${contact.id}`, contact);
+    await axios.put(`/contacts/${contact.id}`, removeHashFromColorCode(contact));
 
     // dispatch({
     //   type: actionTypes.CONTACT_EDIT_ADD_NEW_CONTACT_SUCCESS
