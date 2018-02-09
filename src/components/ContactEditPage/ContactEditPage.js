@@ -36,7 +36,7 @@ export class ContactEditPage extends React.PureComponent {
   }
 
   handleEditContact = (formData) => {
-   return this.props.contactActions.updateContact({
+    return this.props.contactActions.updateContact({
       contact: formData
     });
   }
