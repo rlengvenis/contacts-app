@@ -36,7 +36,7 @@ fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k
 * `reducers` - reducers and their tests
 * `styles` - generic css styles
         
-More reasoning on folder structure: [The 100% correct way to structure a React app (or why there’s no such thing)](https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed) 
+> Note: More information on design decisions [Thoughts.md](https://github.com/rlengvenis/contacts-app/blob/master/THOUGHTS.md) 
 
 
 ### Unit tests ###

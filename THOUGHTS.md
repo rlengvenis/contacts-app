@@ -1,11 +1,11 @@
 # Design thoughts #
 
 ## App structure
-* Didn't see the point using "Container" suffix, as all connect components can be search by IDEA quickly
 * Have made each name to be unique in the whole project for global search purposes
 * No index files due to open tabs with lots of index names visible
 * Components are organized by pages.
-* Reducers and actions are kept separately  
+* Reducers and actions are kept separately
+* Didn't see the point using "Container" suffix, as all connect components can be search by IDE quickly  
 
 More reasoning on folder structure: [The 100% correct way to structure a React app (or why there’s no such thing)](https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed)
 
