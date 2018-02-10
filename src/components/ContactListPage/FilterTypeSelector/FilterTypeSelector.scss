@@ -1,4 +1,7 @@
+@import '../../../styles/core/variables.scss';
+
 .filter-type-selector {
+  display: none;
   margin-top: 25px;
 
   &__label {
@@ -11,3 +14,8 @@
   }
 }
 
+@media screen and (min-width: $media-md) {
+  .filter-type-selector {
+    display: block;
+  }
+}

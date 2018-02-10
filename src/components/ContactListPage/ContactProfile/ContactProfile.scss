@@ -5,18 +5,8 @@
   align-items: flex-start;
   margin-bottom: 30px;
 
-  &__image {
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    line-height: 150px;
-    font-weight: $font-weight-bold;
-    color: $color-white;
-  }
-
   &__detail-list {
     list-style: none;
-    margin-left: 20px;
   }
 
   &__detail-list-item {
@@ -25,6 +15,22 @@
 
   &__title {
     font-weight: $font-weight-bold;
+  }
+
+  &__avatar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $media-md) {
+  .contact-profile {
+    &__avatar {
+      display: block;
+    }
+
+    &__detail-list {
+      margin-left: 20px;
+    }
   }
 }
 

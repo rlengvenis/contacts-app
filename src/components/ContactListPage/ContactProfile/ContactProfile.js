@@ -12,10 +12,12 @@ const ContactProfile = ({
 
   return (
     <div className="contact-profile">
-      <AvatarImage
-        imgUrl={contact.image}
-        color={contact.color}
-      />
+      <div className="contact-profile__avatar">
+        <AvatarImage
+          imgUrl={contact.image}
+          color={contact.color}
+        />
+      </div>
       <ul className="contact-profile__detail-list">
         <li className="contact-profile__detail-list-item">
           <span className="contact-profile__title">First Name:</span> {contact.first_name}

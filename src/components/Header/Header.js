@@ -8,15 +8,13 @@ import './Header.css';
 import Navigation from './Navigation/Navigation';
 
 
-const MEDIA_MD = 600; // The viewport min size, where mobile navigation bar is not shown any more
-
 export class Header extends React.PureComponent {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isNavigationVisible: window.innerWidth >= MEDIA_MD
+      showNavigationDropdown: false
     };
   }
 
@@ -24,16 +22,16 @@ export class Header extends React.PureComponent {
     return (
       <header className="app-header">
         <Navigation
-          isNavigationVisible={this.state.isNavigationVisible}
-          onNavigationVisibilityToggle={this.handleNavigationVisibilityToggle}
+          showNavigationDropdown={this.state.showNavigationDropdown}
+          onNavigationDropdownToggle={this.handleNavigationDropdownToggle}
         />
       </header>
     );
   }
 
-  handleNavigationVisibilityToggle = () => {
+  handleNavigationDropdownToggle = () => {
     this.setState({
-      isNavigationVisible: window.innerWidth >= MEDIA_MD || !this.state.isNavigationVisible
+      showNavigationDropdown: !this.state.showNavigationDropdown
     });
   }
 }

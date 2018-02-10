@@ -6,19 +6,19 @@ import './Navigation.css';
 
 
 const Navigation = ({
-  isNavigationVisible,
-  onNavigationVisibilityToggle
+  showNavigationDropdown,
+  onNavigationDropdownToggle
 }) => {
 
   const navigationStyle = classnames('navigation__list', {
-    'navigation__list--hidden': !isNavigationVisible
+    'navigation__list--visible': showNavigationDropdown
   });
 
   return (
     <nav>
       <i
         className="material-icons navigation__menu"
-        onClick={onNavigationVisibilityToggle}
+        onClick={onNavigationDropdownToggle}
       >
         menu
       </i>
@@ -27,7 +27,7 @@ const Navigation = ({
           <NavLink
             className="navigation__link"
             activeClassName="navigation__link--active"
-            onClick={onNavigationVisibilityToggle}
+            onClick={onNavigationDropdownToggle}
             to="/contacts"
           >
             Contacts
@@ -37,7 +37,7 @@ const Navigation = ({
           <NavLink
             className="navigation__link"
             activeClassName="navigation__link--active"
-            onClick={onNavigationVisibilityToggle}
+            onClick={onNavigationDropdownToggle}
             to="/add-contact"
           >
             Add New

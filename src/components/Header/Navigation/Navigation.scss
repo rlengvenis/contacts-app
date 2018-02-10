@@ -11,15 +11,15 @@
 
   &__list {
     margin: 0 15px;
-    max-height: 500px;
+    max-height: 0px;
+    overflow: hidden;
     line-height: 64px;
     font-size: 18px;
     list-style-type: none;
     transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
 
-    &--hidden {
-      max-height: 0px;
-      overflow: hidden;
+    &--visible {
+      max-height: 500px;
     }
   }
 
@@ -47,18 +47,8 @@
 
     &__list {
       display: flex;
+      max-height: 500px;
     }
   }
 }
-
-@keyframes navigation {
-  0% {
-    color: pink;
-  }
-
-  100% {
-    color: blue;
-  }
-}
-
 
