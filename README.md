@@ -23,10 +23,12 @@ For building a production version use:
 yarn build
 ```
 
-> Note: Python server backend should be running on port: 127.0.0.1:5000. For filtering to work properly
+> Python server backend should be running on port: 127.0.0.1:5000. For filtering to work properly
 fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k]`. A server with a fixed bug can be downloaded from [contacts-app-server-0.2.7](https://github.com/rlengvenis/contacts-app-server-0.2.7)
 
 ## Notes
+
+Information on design decisions [Thoughts.md](https://github.com/rlengvenis/contacts-app/blob/master/THOUGHTS.md)
 
 ### Folder structure ###
 
@@ -34,9 +36,7 @@ fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k
 * `components` - organized by page and tests
 * `config` - cofiguration files
 * `reducers` - reducers and their tests
-* `styles` - generic css styles
-        
-> Note: More information on design decisions [Thoughts.md](https://github.com/rlengvenis/contacts-app/blob/master/THOUGHTS.md) 
+* `styles` - generic css styles 
 
 
 ### Unit tests ###
