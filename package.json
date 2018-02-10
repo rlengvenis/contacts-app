@@ -31,7 +31,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "test": "NODE_ENV=development mocha --watch --require babel-core/register src/setupTests.js 'src/**/*.test.js'",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -41,6 +41,7 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "jsdom": "^11.5.1",
     "mocha": "^4.0.1",
+    "moxios": "^0.4.0",
     "react-test-renderer": "^16.2.0",
     "redux-mock-store": "^1.4.0",
     "sinon": "^4.1.3"

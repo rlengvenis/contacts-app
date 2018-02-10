@@ -5,7 +5,6 @@ import {expect} from 'chai';
 import {use} from 'chai';
 import chaiExclude from 'chai-exclude';
 
-
 use(chaiExclude);
 
 configure({adapter: new Adapter()});
@@ -13,7 +12,6 @@ configure({adapter: new Adapter()});
 const dom = new JSDOM('<!doctype html><html><body></body></html>');
 
 global.window = dom.window;
-global.window.requestAnimationFrame = (callback) => setTimeout(callback, 0); // A shim for testing animations
 global.document = dom.window.document;
 global.history = dom.history;
 

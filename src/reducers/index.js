@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux';
 import {reducer as formReducer} from 'redux-form'
 
-import notificationsReducer from './notificationsReducer';
+import notificationsReducer from './notificationsReducer/notificationsReducer';
 import contactListReducer from './contactListReducer';
 import contactReducer from './contactReducer';
 

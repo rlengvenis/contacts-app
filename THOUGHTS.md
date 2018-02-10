@@ -9,6 +9,9 @@
 
 More reasoning on folder structure: [The 100% correct way to structure a React app (or why there’s no such thing)](https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed)
 
+## Unit Tests
+* Sample examples implemented are ContactListPage.test.js, notificationsReducer.test.js and contactActions.test.js 
+
 ## State management
 * Application state was stored in Redux store. It allows persist state and control its usage and lifecycle independently from components. Bonus is the dev tools with time-traveling/debuging options.
 * I have intentionally used ContactListPage React state for storing filter data, as it scoped to one page only and is more of UI state. 

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import PropTypes from 'prop-types';
 
-import * as contactActions from '../../actions/contactActions';
+import * as contactActions from '../../actions/contactActions/contactActions';
 
 import ContactForm from '../ContactForm/ContactForm';
 

@@ -17,6 +17,12 @@ Start development version:
 yarn start
 ```
 
+Run unit tests:
+
+```sh
+yarn test
+```
+
 For building a production version use:
 
 ```sh
@@ -37,17 +43,6 @@ Information on design decisions [Thoughts.md](https://github.com/rlengvenis/cont
 * `config` - cofiguration files
 * `reducers` - reducers and their tests
 * `styles` - generic css styles 
-
-
-### Unit tests ###
-
-`src/setupTests.js` holds project test env configuration. Technologies used:
-
-* [enzyme](https://github.com/airbnb/enzyme) - a wrapper for React test utils
-* [chai](https://github.com/chaijs/chai) - assertion library
-* [mocha](https://github.com/mochajs/mocha) - a test framework
-* [jsdom](https://github.com/tmpvar/jsdom) - a javascript DOM implementation 
-
 
 ## Features
 | Feature | References |

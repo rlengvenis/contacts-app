@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-import history from '../history';
-import * as actionTypes from './actionTypes';
+import history from '../../history';
+import * as actionTypes from '../actionTypes';
 import {
   addHashToColorCode,
   removeHashFromColorCode
-} from '../utils/contactsDataUtils';
+} from '../../utils/contactsDataUtils';
 
 
 export const addNewContact = ({contact}) => async (dispatch) => {

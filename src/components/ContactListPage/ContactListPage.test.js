@@ -2,33 +2,51 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-import {TaskPage} from './TaskPage';
+import {ContactListPage} from './ContactListPage';
 
 
-describe('TaskPage', () => {
+describe('ContactListPage', () => {
   let props;
 
   beforeEach(() => {
     props = {
-      taskActions: {
-        addTask: sinon.spy()
+      contactListActions: {
+        getContactList: sinon.spy()
       },
-      handleSubmit: sinon.spy(),
-      reset: sinon.spy(),
-      tasks: [{
-        id: 'id1',
-        taskName: 'task1',
+      notificationActions: {
+        clearMessages: sinon.spy()
+      },
+      contactList: [{
+        id: 'Id_1',
       }, {
-        id: 'id2',
-        taskName: 'task2',
+        id: 'Id_1',
       }]
+
     };
   });
 
-  it('should initialy render two tasks', () => {
-    const wrapper = shallow(<TaskPage {...props}/>);
+  it('should call fetch contacts when component is mounted ', () => {
+    const wrapper = shallow(<ContactListPage {...props}/>);
 
-    expect(wrapper.find('.task-page__task-item')).to.have.length(2);
+    expect(props.contactListActions.getContactList.calledOnce).to.be.true;
   });
-});
 
+  it('should call fetch when filter input is changed', () => {
+    const wrapper = shallow(<ContactListPage {...props}/>);
+    wrapper.find('input').simulate('change', {target: {value: 'x'}});
+
+    expect(props.contactListActions.getContactList.calledTwice).to.be.true;
+  });
+
+  it('should clear messages is unMounted', () => {
+    const wrapper = shallow(<ContactListPage {...props}/>);
+    wrapper.unmount();
+
+    expect(props.notificationActions.clearMessages.calledOnce).to.be.true;
+  });
+
+  it('should render profiles provided', () => {
+    const wrapper = shallow(<ContactListPage {...props}/>);
+    expect(wrapper.find('ContactProfile')).to.have.length(2);
+  })
+});

@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import queryString from 'query-string';
 import PropTypes from 'prop-types';
 
-import * as contactActions from '../../actions/contactActions';
+import * as contactActions from '../../actions/contactActions/contactActions';
 
 import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
 import ContactForm from '../ContactForm/ContactForm';
