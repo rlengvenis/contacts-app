@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux';
 
 import {NOTIFICATION_DISPLAY_INTERVAL} from '../../config/appConfig';
 import * as notificationActions from '../../actions/notificationActions';
+
 import './Notificationbar.css';
 
 import ErrorMessage from './ErrorMessage/ErrorMessage';
