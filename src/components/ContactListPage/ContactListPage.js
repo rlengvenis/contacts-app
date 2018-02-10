@@ -6,9 +6,9 @@ import './ContactListPage.css';
 
 import * as contactListActions from '../../actions/contactListActions';
 
-import FilterTypeSelector from './FilterTypeSelector';
-import DefaultSpinner from '../shared/DefaultSpinner';
-import ContactProfile from './ContactProfile';
+import FilterTypeSelector from './FilterTypeSelector/FilterTypeSelector';
+import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
+import ContactProfile from './ContactProfile/ContactProfile';
 
 
 export class ContactListPage extends React.PureComponent {

@@ -3,7 +3,7 @@ import {Field} from 'redux-form';
 
 import "./ColorPickerField.css";
 
-import FormInput from '../shared/FormInput';
+import FormInput from '../../shared/FormInput/FormInput';
 
 
 const ColorPickerField = () => {

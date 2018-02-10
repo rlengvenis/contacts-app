@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 import './ContactProfile.css';
 
-import AvatarImage from './AvatarImage';
+import AvatarImage from '../AvatarImage/AvatarImage';
 
 
 const ContactProfile = ({

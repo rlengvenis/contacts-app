@@ -4,8 +4,8 @@ import {required, url, format} from 'redux-form-validators'
 
 import './ContactForm.css';
 
-import FormInput from '../shared/FormInput';
-import ColorPickerField from './ColorPickerField';
+import FormInput from '../shared/FormInput/FormInput';
+import ColorPickerField from './ColorPickerField/ColorPickerField';
 
 
 const ContactForm = ({

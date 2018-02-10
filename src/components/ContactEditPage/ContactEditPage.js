@@ -5,7 +5,7 @@ import queryString from 'query-string';
 import {isEmpty} from 'lodash';
 
 import * as contactActions from '../../actions/contactActions';
-import DefaultSpinner from '../shared/DefaultSpinner';
+import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
 
 import ContactForm from '../ContactForm/ContactForm';
 

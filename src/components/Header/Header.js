@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import './Header.css';
 
-import Navigation from './Navigation';
+import Navigation from './Navigation/Navigation';
 
 
 const MEDIA_MD = 600; // The viewport min size, where mobile navigation bar is not shown any more
