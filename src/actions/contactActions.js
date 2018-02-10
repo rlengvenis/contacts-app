@@ -12,19 +12,20 @@ export const addNewContact = ({contact}) => async (dispatch) => {
   try {
     await axios.post('/contacts', removeHashFromColorCode(contact));
 
-    // dispatch({
-    //   type: actionTypes.CONTACT_ADD_NEW_CONTACT_SUCCESS
-    // });
+    dispatch({
+      type: actionTypes.NOTIFICATION_SHOW_INFO,
+      payload: 'Contact successfully added'
+    });
 
     history.push({
       pathname: '/contacts'
     });
 
   } catch (error) {
-    // dispatch({
-    //   type: actionTypes.CONTACT_LIST_GET_ERROR,
-    //   payload: 'Error occurred while getting contact list'
-    // });
+    dispatch({
+      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      payload: 'Error occurred while adding new contact'
+    });
   }
 };
 
@@ -38,10 +39,10 @@ export const getContactById = (id) => async (dispatch) => {
     });
 
   } catch (error) {
-    // dispatch({
-    //   type: actionTypes.CONTACT_LIST_GET_ERROR,
-    //   payload: 'Error occurred while getting contact list'
-    // });
+    dispatch({
+      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      payload: 'Error occurred while getting a contact by id'
+    });
   }
 };
 
@@ -53,18 +54,19 @@ export const updateContact = ({contact}) => async (dispatch) => {
   try {
     await axios.put(`/contacts/${contact.id}`, removeHashFromColorCode(contact));
 
-    // dispatch({
-    //   type: actionTypes.CONTACT_EDIT_ADD_NEW_CONTACT_SUCCESS
-    // });
+    dispatch({
+      type: actionTypes.NOTIFICATION_SHOW_INFO,
+      payload: 'Contact successfully updated'
+    });
 
     history.push({
       pathname: '/contacts'
     });
 
   } catch (error) {
-    // dispatch({
-    //   type: actionTypes.CONTACT_LIST_GET_ERROR,
-    //   payload: 'Error occurred while getting contact list'
-    // });
+    dispatch({
+      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      payload: 'Error occurred while updating a contact'
+    });
   }
 };

@@ -11,6 +11,7 @@ import './Root.css';
 import ContactListPage from './ContactListPage/ContactListPage';
 import ContactAddPage from './ContactAddPage/ContactAddPage';
 import ContactEditPage from './ContactEditPage/ContactEditPage';
+import NotificationBar from './NotificationBar/NotificationBar';
 import Header from './Header/Header';
 
 
@@ -18,6 +19,7 @@ const Root = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
+        <NotificationBar/>
         <Header/>
         <main className="container">
           <Switch>

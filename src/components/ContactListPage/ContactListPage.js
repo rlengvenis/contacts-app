@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import './ContactListPage.css';
 
 import * as contactListActions from '../../actions/contactListActions';
+import * as notificationActions from '../../actions/notificationActions';
 
 import FilterTypeSelector from './FilterTypeSelector/FilterTypeSelector';
 import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
@@ -17,7 +18,6 @@ export class ContactListPage extends React.PureComponent {
     super(props);
 
     // It is more of UI state changes, don't want to use redux as it increases boilerplate
-
     this.state = {
       contactFilterType: 'first_name',
       contactFilterValue: ''
@@ -26,6 +26,10 @@ export class ContactListPage extends React.PureComponent {
 
   componentDidMount() {
     this.props.contactListActions.getContactList();
+  }
+
+  componentWillUnmount() {
+    this.props.notificationActions.clearMessages();
   }
 
   render() {
@@ -107,7 +111,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  contactListActions: bindActionCreators(contactListActions, dispatch)
+  contactListActions: bindActionCreators(contactListActions, dispatch),
+  notificationActions: bindActionCreators(notificationActions, dispatch)
 });
 
 export default connect(

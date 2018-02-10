@@ -1,0 +1,9 @@
+@import "../../../styles/core/variables.scss";
+
+.info-message {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: $font-size-small;
+  background-color: $color-green;
+  color: $color-white;
+}
