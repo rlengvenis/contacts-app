@@ -16,8 +16,11 @@ export class ContactListPage extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    // It is more of UI state changes, don't want to use redux as it increases boilerplate
+
     this.state = {
-      contactFilterType: 'first_name'
+      contactFilterType: 'first_name',
+      contactFilterValue: ''
     };
   }
 
@@ -67,9 +70,18 @@ export class ContactListPage extends React.PureComponent {
     this.setState({
       contactFilterType: e.target.value
     });
+
+    this.props.contactListActions.getContactList({
+      contactFilterType: e.target.value,
+      contactFilterValue: this.state.contactFilterValue
+    });
   };
 
   handleContactsFilterValueChange = (e) => {
+    this.setState({
+      contactFilterValue: e.target.value
+    });
+
     this.props.contactListActions.getContactList({
       contactFilterType: this.state.contactFilterType,
       contactFilterValue: e.target.value
