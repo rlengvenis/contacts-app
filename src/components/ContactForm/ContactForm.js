@@ -1,6 +1,7 @@
 import React from 'react';
 import {reduxForm, Field} from 'redux-form';
 import {required, url, format} from 'redux-form-validators'
+import PropTypes from 'prop-types';
 
 import './ContactForm.css';
 
@@ -83,6 +84,12 @@ const ContactForm = ({
       </div>
     </form>
   );
+};
+
+ContactForm.proptypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  onSubmitContact: PropTypes.func.isRequired,
+  submitting: PropTypes.func.isRequired
 };
 
 export default reduxForm({

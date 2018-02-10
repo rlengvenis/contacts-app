@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './ContactProfile.css';
 
@@ -47,6 +48,10 @@ const ContactProfile = ({
       </ul>
     </div>
   )
+};
+
+ContactProfile.proptypes = {
+  contact: PropTypes.object
 };
 
 export default ContactProfile;

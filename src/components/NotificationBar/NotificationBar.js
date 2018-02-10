@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import PropTypes from 'prop-types';
 
 import {NOTIFICATION_DISPLAY_INTERVAL} from '../../config/appConfig';
 import * as notificationActions from '../../actions/notificationActions';
@@ -11,7 +12,7 @@ import ErrorMessage from './ErrorMessage/ErrorMessage';
 import InfoMessage from './InfoMessage/InfoMessage';
 
 
-class NotificationBar extends React.PureComponent {
+export class NotificationBar extends React.PureComponent {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errorMessage || nextProps.infoMessage) {
@@ -45,9 +46,14 @@ class NotificationBar extends React.PureComponent {
   }
 }
 
+NotificationBar.proptypes = {
+  errorMessage: PropTypes.string,
+  infoMessage: PropTypes.string
+};
+
 const mapStateToProps = (state) => ({
-  errorMessage: state.notification.errorMessage,
-  infoMessage: state.notification.infoMessage
+  errorMessage: state.notifications.errorMessage,
+  infoMessage: state.notifications.infoMessage
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -58,6 +64,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(NotificationBar);
+
 
 
 

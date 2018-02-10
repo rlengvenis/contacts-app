@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import {NavLink} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './Navigation.css';
 
@@ -46,6 +47,11 @@ const Navigation = ({
       </ul>
     </nav>
   );
+};
+
+Navigation.proptypes = {
+  showNavigationDropdown: PropTypes.func.isRequired,
+  onNavigationDropdownToggle: PropTypes.func.isRequired
 };
 
 export default Navigation;

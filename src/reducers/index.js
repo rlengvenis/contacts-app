@@ -2,13 +2,13 @@ import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux';
 import {reducer as formReducer} from 'redux-form'
 
-import notificationReducer from './notificationReducer';
+import notificationsReducer from './notificationsReducer';
 import contactListReducer from './contactListReducer';
 import contactReducer from './contactReducer';
 
 
 export default combineReducers({
-  notification: notificationReducer,
+  notifications: notificationsReducer,
   contactList: contactListReducer,
   contact: contactReducer,
   form: formReducer,

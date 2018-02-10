@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import "./FilterTypeSelector.css";
 
@@ -62,6 +63,10 @@ const FilterTypeSelector = ({
       </label>
     </div>
   )
+};
+
+FilterTypeSelector.proptypes = {
+  onContactFilterTypeChange: PropTypes.func.isRequired
 };
 
 export default FilterTypeSelector;

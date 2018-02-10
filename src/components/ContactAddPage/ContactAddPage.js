@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import PropTypes from 'prop-types';
 
 import * as contactActions from '../../actions/contactActions';
 
@@ -27,6 +28,13 @@ export class ContactAddPage extends React.PureComponent {
     });
   }
 }
+
+ContactAddPage.proptypes = {
+  contactActions: PropTypes.shape({
+    addNewContact: PropTypes.func.isRequired,
+    resetContact: PropTypes.func.isRequired,
+  }).isRequired
+};
 
 const mapDispatchToProps = (dispatch) => ({
   contactActions: bindActionCreators(contactActions, dispatch)

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import queryString from 'query-string';
-import {isEmpty} from 'lodash';
+import PropTypes from 'prop-types';
 
 import * as contactActions from '../../actions/contactActions';
 
@@ -41,6 +41,15 @@ export class ContactEditPage extends React.PureComponent {
     });
   }
 }
+
+ContactEditPage.proptypes = {
+  contactActions: PropTypes.shape({
+    getContactById: PropTypes.func.isRequired,
+    resetContact: PropTypes.func.isRequired,
+    updateContact: PropTypes.func.isRequired
+  }).isRequired,
+  initialValues: PropTypes.object
+};
 
 const mapStateToProps = (state) => ({
   initialValues: state.contact

@@ -5,23 +5,23 @@ const INITIAL_STATE = {
   infoMessage: ''
 };
 
-const notificationReducer = (state = INITIAL_STATE, action) => {
+const notificationsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case actionTypes.NOTIFICATION_SHOW_INFO: {
+    case actionTypes.NOTIFICATIONS_SHOW_INFO: {
       return {
         ...state,
         infoMessage: action.payload
       }
     }
 
-    case actionTypes.NOTIFICATION_SHOW_ERROR: {
+    case actionTypes.NOTIFICATIONS_SHOW_ERROR: {
       return {
         ...state,
         errorMessage: action.payload
       }
     }
 
-    case actionTypes.NOTIFICATION_CLEAR_MESSAGES: {
+    case actionTypes.NOTIFICATIONS_CLEAR_MESSAGES: {
       return {
         errorMessage: '',
         infoMessage: ''
@@ -34,4 +34,4 @@ const notificationReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default notificationReducer;
+export default notificationsReducer;

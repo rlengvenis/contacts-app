@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import "./AvatarImage.css";
 
@@ -26,6 +27,11 @@ const AvatarImage = ({
       alt="Profile avatar"
     />
   )
+};
+
+AvatarImage.proptypes = {
+  color: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string
 };
 
 export default AvatarImage;

@@ -13,7 +13,7 @@ export const addNewContact = ({contact}) => async (dispatch) => {
     await axios.post('/contacts', removeHashFromColorCode(contact));
 
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_INFO,
+      type: actionTypes.NOTIFICATIONS_SHOW_INFO,
       payload: 'Contact successfully added'
     });
 
@@ -23,7 +23,7 @@ export const addNewContact = ({contact}) => async (dispatch) => {
 
   } catch (error) {
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      type: actionTypes.NOTIFICATIONS_SHOW_ERROR,
       payload: 'Error occurred while adding new contact'
     });
   }
@@ -40,7 +40,7 @@ export const getContactById = (id) => async (dispatch) => {
 
   } catch (error) {
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      type: actionTypes.NOTIFICATIONS_SHOW_ERROR,
       payload: 'Error occurred while getting a contact by id'
     });
   }
@@ -55,7 +55,7 @@ export const updateContact = ({contact}) => async (dispatch) => {
     await axios.put(`/contacts/${contact.id}`, removeHashFromColorCode(contact));
 
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_INFO,
+      type: actionTypes.NOTIFICATIONS_SHOW_INFO,
       payload: 'Contact successfully updated'
     });
 
@@ -65,7 +65,7 @@ export const updateContact = ({contact}) => async (dispatch) => {
 
   } catch (error) {
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      type: actionTypes.NOTIFICATIONS_SHOW_ERROR,
       payload: 'Error occurred while updating a contact'
     });
   }

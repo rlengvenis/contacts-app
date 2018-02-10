@@ -93,18 +93,15 @@ export class ContactListPage extends React.PureComponent {
   };
 }
 
-// ContactListPage.propTypes = {
-//   handleSubmit: PropTypes.func.isRequired,
-//   reset: PropTypes.func.isRequired,
-//   tasks: PropTypes.arrayOf(PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     taskName: PropTypes.string.isRequired
-//   })).isRequired,
-//   taskActions: PropTypes.shape({
-//     addTask: PropTypes.func.isRequired
-//   }).isRequired
-// };
-
+ContactListPage.propTypes = {
+  contactList: PropTypes.array,
+  contactListActions: PropTypes.shape({
+    getContactList: PropTypes.func.isRequired
+  }).isRequired,
+  notificationActions: PropTypes.shape({
+    clearMessages: PropTypes.func.isRequired
+  }).isRequired
+};
 
 const mapStateToProps = (state) => ({
   contactList: state.contactList

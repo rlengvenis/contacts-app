@@ -27,7 +27,7 @@ export const getContactList = (filterConfig) => async (dispatch) => {
 
   } catch (error) {
     dispatch({
-      type: actionTypes.NOTIFICATION_SHOW_ERROR,
+      type: actionTypes.NOTIFICATIONS_SHOW_ERROR,
       payload: 'Error occurred while getting contact list'
     });
   }
