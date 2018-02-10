@@ -36,14 +36,6 @@ fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k
 
 Information on design decisions [Thoughts.md](https://github.com/rlengvenis/contacts-app/blob/master/THOUGHTS.md)
 
-### Folder structure ###
-
-* `actions` - actions and their tests
-* `components` - organized by page and tests
-* `config` - cofiguration files
-* `reducers` - reducers and their tests
-* `styles` - generic css styles 
-
 ## Features
 | Feature | References |
 |:---|:---|
