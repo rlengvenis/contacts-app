@@ -29,8 +29,9 @@ For building a production version use:
 yarn build
 ```
 
-> Python server backend should be running on port: 127.0.0.1:5000. For filtering to work properly
-fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k]`. A server with a fixed bug can be downloaded from [contacts-app-server-0.2.7](https://github.com/rlengvenis/contacts-app-server-0.2.7)
+> Python server backend should be running on port: 127.0.0.1:5000. 
+> A server with a fixed bug can be downloaded from [contacts-app-server-0.2.7](https://github.com/rlengvenis/contacts-app-server-0.2.7)
+> Else for filtering to work properly fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k]`. 
 
 ## Notes
 
@@ -45,4 +46,4 @@ Information on design decisions [Thoughts.md](https://github.com/rlengvenis/cont
 | BEM and SCSS | [getbem.com](http://getbem.com/) |
 | Async/await presets | [MDN Async Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) |
 | Mobile version navigation ||
-| Unit tests examples ||
+| Unit test examples ||
