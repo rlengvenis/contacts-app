@@ -8,7 +8,7 @@ import * as contactActions from '../../actions/contactActions/contactActions';
 import ContactForm from '../ContactForm/ContactForm';
 
 
-export class ContactAddPage extends React.PureComponent {
+export class ContactAddPage extends React.Component {
 
   componentWillUnmount() {
     this.props.contactActions.resetContact();

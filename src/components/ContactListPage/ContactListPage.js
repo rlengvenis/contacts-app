@@ -12,7 +12,7 @@ import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
 import ContactProfile from './ContactProfile/ContactProfile';
 
 
-export class ContactListPage extends React.PureComponent {
+export class ContactListPage extends React.Component {
 
   constructor(props) {
     super(props);

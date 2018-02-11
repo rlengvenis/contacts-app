@@ -7,7 +7,7 @@ import './Header.css';
 import Navigation from './Navigation/Navigation';
 
 
-export class Header extends React.PureComponent {
+export class Header extends React.Component {
 
   constructor(props) {
     super(props);

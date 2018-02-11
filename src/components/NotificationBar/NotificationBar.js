@@ -12,7 +12,7 @@ import ErrorMessage from './ErrorMessage/ErrorMessage';
 import InfoMessage from './InfoMessage/InfoMessage';
 
 
-export class NotificationBar extends React.PureComponent {
+export class NotificationBar extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errorMessage || nextProps.infoMessage) {

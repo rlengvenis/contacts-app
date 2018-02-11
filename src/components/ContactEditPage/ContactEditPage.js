@@ -10,7 +10,7 @@ import DefaultSpinner from '../shared/DefaultSpinner/DefaultSpinner';
 import ContactForm from '../ContactForm/ContactForm';
 
 
-export class ContactEditPage extends React.PureComponent {
+export class ContactEditPage extends React.Component {
   componentDidMount() {
     const searchQuery = this.props.location.search;
     const contactId = queryString.parse(searchQuery).id;
