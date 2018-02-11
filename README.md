@@ -33,7 +33,7 @@ yarn build
 > A server with a fixed bug can be downloaded from [contacts-app-server-0.2.7](https://github.com/rlengvenis/contacts-app-server-0.2.7)
 > Else for filtering to work properly fix runserver.py line:45 by adding `if contact[k] is not None and v in contact[k]`. 
 
-## Notes
+## Design notes
 
 Information on design decisions [Thoughts.md](https://github.com/rlengvenis/contacts-app/blob/master/THOUGHTS.md)
 
